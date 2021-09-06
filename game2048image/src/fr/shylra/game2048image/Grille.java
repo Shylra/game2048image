@@ -36,18 +36,24 @@ public class Grille {
 		return(true);
 	}
 	
-	public void Next2() {
+	public void Next() {
 		int a;
+		int b;
 		int i;
 		int j;
 		boolean done = false;
 		Random random = new Random();
+		b = random.nextInt(10);
 		while (!done) {
 			a = random.nextInt(16);
 			i = a / 4;
 			j = a % 4;
 			if (this.map[i][j] == 0) {
-				this.map[i][j] = 2;
+				if (b == 0) {
+					this.map[i][j] = 4;
+				} else {
+					this.map[i][j] = 2;
+				}
 				done = true;
 			}
 		}

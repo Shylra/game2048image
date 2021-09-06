@@ -79,7 +79,7 @@ public class Main extends JPanel {
 				} else if (!move) {
 					System.out.println("cette action n'a généré aucun mouvement choisisez une autre action");
 				} else {
-					grille.Next2();
+					grille.Next();
 				}
 				updateUI();
 			}
