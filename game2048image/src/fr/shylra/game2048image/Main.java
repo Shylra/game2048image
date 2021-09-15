@@ -41,7 +41,6 @@ public class Main extends JPanel {
 		map = grille.map;
 		for (int i = 0; i < 4; i++) {
 			for (int j = 0; j < 4; j++) {
-				System.out.print(grille.map[i][j]);
 				if (grille.map[i][j] < 10) {
 					System.out.print("     ");
 				} else if (grille.map[i][j] < 100) {
@@ -63,16 +62,12 @@ public class Main extends JPanel {
 				move = false;
 				if (e.getKeyCode() == KeyEvent.VK_RIGHT ) {
 					move = grille.droite();
-					System.out.println("R");
 				} else if (e.getKeyCode() == KeyEvent.VK_LEFT ) {
 					move = grille.gauche();
-					System.out.println("L");
 				} else if (e.getKeyCode() == KeyEvent.VK_UP ) {
 					move = grille.haut();
-					System.out.println("U");
 				} else if (e.getKeyCode() == KeyEvent.VK_DOWN ) {
 					move = grille.bas();
-					System.out.println("D");
 				}
 				if (!move) {
 					System.out.println("cette action n'a généré aucun mouvement choisisez une autre action");
