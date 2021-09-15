@@ -39,23 +39,6 @@ public class Main extends JPanel {
 
 		Grille grille = new Grille();
 		map = grille.map;
-		for (int i = 0; i < 4; i++) {
-			for (int j = 0; j < 4; j++) {
-				if (grille.map[i][j] < 10) {
-					System.out.print("     ");
-				} else if (grille.map[i][j] < 100) {
-					System.out.print("    ");
-				} else if (grille.map[i][j] < 1000) {
-					System.out.print("   ");
-				} else if (grille.map[i][j] < 10000) {
-					System.out.print("  ");
-				} else {
-					System.out.print(" ");
-				}
-			}
-			System.out.println("\n");
-		}
-		System.out.println();
 		frm.addKeyListener(new KeyAdapter() {
 			@Override
 			public void keyPressed(KeyEvent e) {
