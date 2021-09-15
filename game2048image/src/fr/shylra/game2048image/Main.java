@@ -74,12 +74,13 @@ public class Main extends JPanel {
 					move = grille.bas();
 					System.out.println("D");
 				}
-				if (grille.IsOver()) {
-					System.out.println("Game Over !");
-				} else if (!move) {
+				if (!move) {
 					System.out.println("cette action n'a généré aucun mouvement choisisez une autre action");
 				} else {
 					grille.Next();
+					if (grille.IsOver()) {
+						System.out.println("Game Over !");
+					}
 				}
 				updateUI();
 			}

@@ -31,6 +31,97 @@ public class Grille {
 				if (this.map[i][j] == 0) {
 					return (false);
 				}
+				if (i == 0) {
+					if (j == 0) {
+						if (this.map[i][j] == this.map[i+1][j]) {
+							return (false);
+						}
+						if (this.map[i][j] == this.map[i][j+1]) {
+							return (false);
+						}
+					}
+					else if (j == 3) {
+						if (this.map[i][j] == this.map[i+1][j]) {
+							return (false);
+						}
+						if (this.map[i][j] == this.map[i][j-1]) {
+							return (false);
+						}
+					} else {
+						if (this.map[i][j] == this.map[i+1][j]) {
+							return (false);
+						}
+						if (this.map[i][j] == this.map[i][j+1]) {
+							return (false);
+						}
+						if (this.map[i][j] == this.map[i][j-1]) {
+							return (false);
+						}
+					}
+				} else if (i == 3) {
+					if (j == 0) {
+						if (this.map[i][j] == this.map[i-1][j]) {
+							return (false);
+						}
+						if (this.map[i][j] == this.map[i][j+1]) {
+							return (false);
+						}
+					}
+					else if (j == 3) {
+						if (this.map[i][j] == this.map[i-1][j]) {
+							return (false);
+						}
+						if (this.map[i][j] == this.map[i][j-1]) {
+							return (false);
+						}
+					} else {
+						if (this.map[i][j] == this.map[i-1][j]) {
+							return (false);
+						}
+						if (this.map[i][j] == this.map[i][j+1]) {
+							return (false);
+						}
+						if (this.map[i][j] == this.map[i][j-1]) {
+							return (false);
+						}
+					}
+				} else {
+					if (j == 0) {
+						if (this.map[i][j] == this.map[i+1][j]) {
+							return (false);
+						}
+						if (this.map[i][j] == this.map[i-1][j]) {
+							return (false);
+						}
+						if (this.map[i][j] == this.map[i][j+1]) {
+							return (false);
+						}
+					}
+					else if (j == 3) {
+						if (this.map[i][j] == this.map[i+1][j]) {
+							return (false);
+						}
+						if (this.map[i][j] == this.map[i-1][j]) {
+							return (false);
+						}
+						if (this.map[i][j] == this.map[i][j-1]) {
+							return (false);
+						}
+					} else {
+						if (this.map[i][j] == this.map[i+1][j]) {
+							return (false);
+						}
+						if (this.map[i][j] == this.map[i-1][j]) {
+							return (false);
+						}
+						if (this.map[i][j] == this.map[i][j+1]) {
+							return (false);
+						}
+						if (this.map[i][j] == this.map[i][j-1]) {
+							return (false);
+						}
+					}
+				}
 			}
 		}
 		return(true);
