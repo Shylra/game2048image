@@ -12,7 +12,7 @@ import javax.swing.SwingUtilities;
 
 
 public class Main extends JPanel {
-
+	private static final long serialVersionUID = -5079381071348650570L;//Le serial version uid est pour qu'eclipse soit content car sinon on prend un warning a la compilation.	En fait toutes les classes implémentants Serializable (ic JFrame, JPanel) doivent posséder cet attribut. Cela doit être utilisé par les ObjectOutputStream pour enregistrer les objets. 
 	boolean move;
 	BufferedImage image;
 	BufferedImage[] images = new BufferedImage[12];
